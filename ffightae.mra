@@ -21,8 +21,8 @@
             <part name="ff-3m.5a" crc="52291cd2" map="21000000"/>
        </interleave>
        <!-- Mapper for ffight --> 
-       <part> FF F7 44 40 07 </part>
+       <part> FF F3 44 40 07 </part>
        <!-- CPS-B config for ffight --> 
-       <part> 30 08 04 02 30 2E 2C 2A 28 26 FF FF FF FF 00 FF </part>
+       <part> 30 08 04 02 30 00 36 2E 2C 2A 28 26 FF FF FF FF 00 FF </part>
     </rom>
 </misterromdescription>
