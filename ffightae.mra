@@ -5,6 +5,19 @@
     <manufacturer>Capcom</manufacturer>
     <rbf>jtcps1</rbf>
     <rom index="0" zip="ffightae.zip" md5="none">
+        <!-- relative position of each ROM section in the file, discounting the header, in kilobytes -->
+        <!-- Sound CPU-->
+        <part>00 04 </part>
+        <!-- OKI samples-->
+        <part>40 04 </part>
+        <!-- Graphics-->
+        <part>40 05 </part>
+        <part repeat="10">FF</part>
+        <!-- Mapper for ffight --> 
+        <part> FF F3 44 40 07 </part>
+        <!-- CPS-B config for ffight --> 
+        <part> 30 08 04 02 30 00 36 2E 2C 2A 28 26 FF FF FF FF 00 FF </part>
+        <part repeat="25">FF</part>
         <!-- maincpu -->
         <part name="ff-23m.8h" crc="86DEF74F"/>
         <part name="ff-22m.7h" crc="CBDD8689"/>
@@ -20,9 +33,5 @@
             <part name="ff-1m.3a" crc="0b605e44" map="00210000"/>
             <part name="ff-3m.5a" crc="52291cd2" map="21000000"/>
        </interleave>
-       <!-- Mapper for ffight --> 
-       <part> FF F3 44 40 07 </part>
-       <!-- CPS-B config for ffight --> 
-       <part> 30 08 04 02 30 00 36 2E 2C 2A 28 26 FF FF FF FF 00 FF </part>
     </rom>
 </misterromdescription>
