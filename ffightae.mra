@@ -6,18 +6,20 @@
     <rbf>jtcps1</rbf>
     <rom index="0" zip="ffightae.zip" md5="none">
         <!-- relative position of each ROM section in the file, discounting the header, in kilobytes -->
-        <!-- Sound CPU-->
+        <!-- Size of M68000 code 1024 kB -->
+        <!-- Sound CPU size 64 kB -->
         <part>00 04 </part>
-        <!-- OKI samples-->
+        <!-- OKI samples size 256 kB -->
         <part>40 04 </part>
-        <!-- Graphics-->
+        <!-- Graphics size 2048 kB -->
         <part>40 05 </part>
         <part repeat="10">FF</part>
-        <!-- Mapper for ffight --> 
-        <part> FF F3 44 40 07 </part>
         <!-- CPS-B config for ffight --> 
-        <part> 30 08 04 02 30 00 36 2E 2C 2A 28 26 FF FF FF FF 00 FF </part>
-        <part repeat="25">FF</part>
+        <part> FF 00 FF FF FF FF 26 28 2A 2C 2E 36 00 30 02 04 08 30 </part>
+        <!-- Mapper for ffight --> 
+        <part> 07 40 44 F3 FF </part>
+        <part> 01 </part>
+        <part repeat="24">FF</part>
         <!-- maincpu -->
         <part name="ff-23m.8h" crc="86DEF74F"/>
         <part name="ff-22m.7h" crc="CBDD8689"/>
@@ -28,10 +30,11 @@
         <part name="ff_19.12c" crc="1ef137f9"/>
         <!-- gfx -->
         <interleave output="64">
-            <part name="ff-5m.7a" crc="9c284108" map="00000021"/>
-            <part name="ff-7m.9a" crc="a7584dfb" map="00002100"/>
-            <part name="ff-1m.3a" crc="0b605e44" map="00210000"/>
-            <part name="ff-3m.5a" crc="52291cd2" map="21000000"/>
-       </interleave>
+            <part name="ff-5m.7a" crc="9c284108"  map="00000021"/>
+            <part name="ff-7m.9a" crc="a7584dfb"  map="00002100"/>
+            <part name="ff-1m.3a" crc="0b605e44"  map="00210000"/>
+            <part name="ff-3m.5a" crc="52291cd2"  map="21000000"/>
+        </interleave>
     </rom>
+    <rom index="1"><part> 00 </part></rom>
 </misterromdescription>
