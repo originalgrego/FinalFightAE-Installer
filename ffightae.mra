@@ -17,7 +17,7 @@
         <!-- CPS-B config for ffight --> 
         <part> FF 00 FF FF FF FF 26 28 2A 2C 2E 36 00 30 02 04 08 30 </part>
         <!-- Mapper for ffight --> 
-        <part> 07 40 44 F3 FF </part>
+        <part> 1E 40 44 F3 FF </part>
         <part> 01 </part>
         <part repeat="24">FF</part>
         <!-- maincpu -->
@@ -36,7 +36,22 @@
             <part name="ff-3m.5a" crc="52291cd2"  map="21000000"/>
         </interleave>
     </rom>
-    <rom index="1"><part> 70 </part></rom>
+    <rom index="1"><part> 7E </part></rom>
     <buttons names="B0,B1,B2,-,-,-,Start,Coin,Pause" 
         default="A,B,X,R,L,Start"/>
+    <switches default="FF,FF,FF,FF">
+        <dip bits="8,10"	 name="Coin A" ids="4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/6 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+        <dip bits="11,13"	 name="Coin B" ids="4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/6 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+        <dip bits="14"	 name="2 Coins to Start, 1 to Continue" ids="On,Off"/>
+        <dip bits="16,18"	 name="Difficulty Level 1" ids="Hardest,Harder,Hard,Medium,Normal,Easy,Easier,Easiest"/>
+        <dip bits="19,20"	 name="Difficulty Level 2" ids="Hardest,Hard,Normal,Easy"/>
+        <dip bits="21,22"	 name="Bonus Life" ids="None,100k and every 200k,200k,100k"/>
+        <dip bits="24,25"	 name="Lives" ids="1,4,3,2"/>
+        <dip bits="26"	 name="Free Play" ids="On,Off"/>
+        <dip bits="27"	 name="Freeze" ids="On,Off"/>
+        <dip bits="28"	 name="Flip Screen" ids="On,Off"/>
+        <dip bits="29"	 name="Demo Sounds" ids="On,Off"/>
+        <dip bits="30"	 name="Allow Continue" ids="Yes,No"/>
+        <dip bits="31"	 name="Game Mode" ids="Test,Game"/>
+    </switches>
 </misterromdescription>
