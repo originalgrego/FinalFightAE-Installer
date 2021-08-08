@@ -6,6 +6,16 @@ Requirements:
  * Windows
  * Java
 
+**************** WARNING! **************** 
+
+This installer only works with split mame roms, do not use a merged rom or you will have a bad time.
+
+The installer should be placed in the root of a drive, ex C:\FinalFightAE-Installer
+
+Put the ffight.zip in the same directory as the installer.
+
+**************** WARNING! **************** 
+
 To Install:
 
 	1.) Double click ffae_installer.jar
